@@ -10,6 +10,6 @@ action "prepare" {
 
 action "test" {
   needs = ["prepare"]
-  uses = "eirslett/chrome-karma-docker/docker/dev@master"
+  uses = "actions/npm@master"
   runs = ["node --expose-gc tools/test.js"]
 }
