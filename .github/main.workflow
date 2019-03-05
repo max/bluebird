@@ -15,7 +15,7 @@ action "install" {
 }
 
 action "test" {
-  needs = ["prepare"]
+  needs = ["install"]
   uses = "actions/npm@master"
   runs = ["node", "--expose-gc", "tools/test.js"]
 }
