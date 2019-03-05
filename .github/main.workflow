@@ -11,5 +11,5 @@ action "prepare" {
 action "test" {
   needs = ["prepare"]
   uses = "actions/npm@master"
-  runs = ["node --expose-gc tools/test.js"]
+  runs = ["node", "--expose-gc", "tools/test.js"]
 }
